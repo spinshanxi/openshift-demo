@@ -19,14 +19,7 @@ public class ResumeController {
         return "resume_en";
     }
 
-    //@RequestMapping(value = { "/tw", "/tw/" }, method = GET)
-    /**
-     * 123
-     * <ul>
-     * <li>1</li>
-     * </ul>
-     * @return String 
-     */
+    @RequestMapping(value = { "/tw", "/tw/" }, method = GET)
     public String resumeEn() {
         return "resume_tw";
     }
