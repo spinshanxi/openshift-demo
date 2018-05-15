@@ -1,35 +1,21 @@
 package spin.config;
 
-import javax.jms.ConnectionFactory;
-import javax.jms.Topic;
-
-import org.apache.activemq.command.ActiveMQTopic;
-import org.apache.activemq.spring.ActiveMQConnectionFactory;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import org.springframework.jms.annotation.EnableJms;
-import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
-import org.springframework.jms.core.JmsOperations;
-import org.springframework.jms.core.JmsTemplate;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
-import spin.jms.sub.JmsSubscriber;
 
 @Configuration
 @EnableWebMvc
 @ComponentScan("spin")
-//@Import({JmsConfig.class})
 public class WebConfig extends WebMvcConfigurerAdapter {
     // JSP
     //@Bean
