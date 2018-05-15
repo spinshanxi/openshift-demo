@@ -114,6 +114,10 @@
   textarea {
       resize: none;
   }
+  .mypic {
+  	display: flex;
+    justify-content: center;
+  }
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -154,7 +158,9 @@
     </div>
 </div>
 <div id="about" class="container text-center">
-  <img src="resources/images/39609236971_d5bec810b7_b.jpg" class="img-circle person" alt="Spin">
+  <div class="mypic">
+    <img src="resources/images/39609236971_d5bec810b7_b.jpg" class="img-circle person" alt="Spin">
+  </div>
   <h3>Spin Liao</h3>
   <p><em>Java Developer</em></p>
   <p>I have been coding for 8 years. 1 year on my thesis, 7 years on web-site developer.</p>
