@@ -28,4 +28,9 @@ public class ResumeController {
     public String resumeSkillTw() {
         return "resume_skill_tw";
     }
+    
+    @RequestMapping(value = { "/skill/en", "/skill/en/" }, method = GET)
+    public String resumeSkillEn() {
+        return "resume_skill_en";
+    }
 }

@@ -22,4 +22,7 @@
 	
 	<definition name="resume_skill_tw" template="/WEB-INF/views/resume_skill_tw.jsp">	
 	</definition>
+	
+	<definition name="resume_skill_en" template="/WEB-INF/views/resume_skill_en.jsp">	
+	</definition>
 </tiles-definitions>

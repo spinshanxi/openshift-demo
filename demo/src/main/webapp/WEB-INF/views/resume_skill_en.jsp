@@ -217,17 +217,14 @@
                             <div class="spin-content-2">
                                 <ul>
                                     <li>主要都是用 Spring 建置網站，在工作的經歷是上是使用 Spring 2.5.6 的版本，自學部份是 Spring 4.3.12。在 Spring 的幾個模組中較為熟悉也常用的是 Core, DAO, AOP, ORM, Web, Test。</li>
-                                    <li>基礎了解如下:
-                                        <ul>
-                                            <li>熟悉 Spring IoC 容器 XML-base/Java-base 基礎設定。</li>
-                                            <li>會用 iBatis Mapping/Spring JDBC Template 操作資料庫異動與查詢資料。</li>
-                                            <li>有基本 AOP 觀念，會利用 AspectJ 的整合，建立 method 層級的 Advice，例如: 資料庫的交易管理、例外處理、log。</li>
-                                            <li>會 Spring MVC 與 Spring web flow 的使用與設定，可搭配 JSP 與 Thymeleaf 使用 Restful API 的風格。</li>
-                                            <li>會在實作前用 Interface 寫測試程式，即 Test-driven development。</li>
-                                            <li>會用 Quartz 建立排程。</li>
-                                            <li>會用 JMS 的 Queue 與 Topic。</li>
-                                        </ul>
-                                    </li>
+                                    <li>了解 Spring IoC 容器的基礎，不管是 XML-base 還是 Java-base 的設定都很熟悉。</li>
+                                    <li>了解如何使用 iBatis Mapping 工具或是 Spring JDBC 操作資料庫異動與查詢資料。</li>
+                                    <li>了解 AOP 觀念，利用 AspectJ 的整合，建立 method 層級的 Advice，例如: 資料庫的交易管理、例外處理、log。</li>
+                                    <li>了解 Spring MVC 與 Spring web flow 的使用與設定，可搭配 JSP 與 Thymeleaf。</li>
+                                    <li>了解使用 interface 在實作前，建立測試程式的重要性。</li>
+                                    <li>了解如何搭配 Quartz 建立排程。</li>
+                                    <li>了解 JMS 的 Queue 與 Topic 在 Spring 上的使用。</li>
+                                    <li>了解 Restful 在 Spring 上的使用方式。</li>
                                 </ul>
                             </div>
                             <div>
@@ -235,7 +232,7 @@
                             </div>
                             <div class="spin-content-2">
                                 <ul>
-                                    <li>使用過 Fedora 27 server 版與 ubuntu 16 版，程度仍在初學階段。</li>
+                                    <li>使用過 Fedora 27 server 版，程度仍在初學階段。</li>
                                     <li>會使用簡單的基本指令，如: ls, grep, rm, mkdir, vi...等。不熟悉知道用 man 去查。</li>
                                     <li>會簡單的 bash shell script，程度在基礎的流程控制。</li>
                                     <li>架設過簡單的 httpd, vsftpd server。</li>
@@ -258,7 +255,7 @@
                             </div>
                             <div class="spin-content-2">
                                 <ul>
-                                    <li>用過 Oracle, MySQL, Postgres</li>
+                                    <li>用過 Oracle 與 MySQL</li>
                                     <li>了解關聯式資料庫的基本觀念，基礎的 DDL 與 DML 的指令都能使用。</li>
                                 </ul>
                             </div>
