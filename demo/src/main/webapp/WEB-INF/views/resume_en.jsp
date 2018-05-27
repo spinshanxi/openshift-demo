@@ -211,7 +211,7 @@
                     <div class="spin-line-separator-left"></div>
                     <div class="spin-left-2-1">
                         <div class="spin-time">
-                            <p>2017.03 ~ Present</p>
+                            <p>2017.03 ~ 2018.05</p>
                         </div>
                         <div class="spin-record">
                             <div>
@@ -233,8 +233,7 @@
                                     </li>
                                     <li>Created business logic documentation and coding guidelines.</li>
                                     <li>Trained and mentored over 2 junior programmers and developers.</li>
-                                    <li>Building custom Content Management System (Spring MVC, Mybatis, MySQL) for different web sites. - keep going</li>
-                                    <li>Coded and Tuned code in Spring 2.x, Struts 1.x, iBatis, Java, Servlet/JSP, Oracle SQL, JS, CSS, HTML.</li>
+                                    <li>Coded and Tuned code in Spring 2.x/4.x, Spring MVC, Struts 1.x, iBatis/MyBatis, Java, Servlet/JSP, Oracle/MySql, JS, CSS, HTML.</li>
                                 </ul>
                             </div>
                         </div>

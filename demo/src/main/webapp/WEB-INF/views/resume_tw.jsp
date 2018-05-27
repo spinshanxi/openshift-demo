@@ -214,7 +214,7 @@
                     <div class="spin-line-separator-left"></div>
                     <div class="spin-left-2-1">
                         <div class="spin-time">
-                            <p>2017.03 ~ Present</p>
+                            <p>2017.03 ~ 2018.05</p>
                         </div>
                         <div class="spin-record">
                             <div>
@@ -227,14 +227,13 @@
                                 <ul>
                                     <li>維護 Java-based 電商平台前後台系統。</li>
                                     <li>負責修正系統與資料異常, 開發新功能, 測試。</li>
-                                    <li>負責「有.設計 uDesign 網購平台」與「供應商管理後台」。</li>
+                                    <li>負責的系統有「有.設計 uDesign 網購平台」與「供應商管理後台」。</li>
                                     <li>提升前後端程式效能-解決前端 bug: 例如: 利用 Web Storage 機制實現前台的回上一頁的快取效果, 前台商品加入我的最愛商品清單效果, AJAX 選單順序錯亂, 提升前台商品清單頁呈現速度。</li>
-                                    <li>新模組開發-負責建立系統核心模組讓平台可以置入國外商品並且販售。</li>
+                                    <li>模組開發-負責建立系統核心模組讓平台可以置入國外商品並且販售。</li>
                                     <li>API 串接-利用外部系統提供的 API 進行資料交換, 例如: 開通大量「有.設計」會員為「售票網」會員。
                                     <li>撰寫系統文件-產出系統缺乏的商業邏輯文件與程式撰寫規範文件, 讓後進可以快速上手。</li>
                                     <li>指導並引領新進同仁開發程式, 提升大家的開發效率。</li>
-                                    <li>建立客制化 CMS 系統 (Spring MVC, Mybatis, MySQL), 可做為多種前台網站套版使用 - 建置中。</li>
-                                    <li>使用的相關技術有: Spring 2.x, Struts 1.x, iBatis, Java, Servlet/JSP, Oracle SQL, JS, CSS, HTML。</li>
+                                    <li>這份工作使用的相關技術有: Spring 2.x/4.x, Spring MVC, Struts 1.x, iBatis/Mybatis, Java, Servlet/JSP, Oracle/MySql, JS, CSS, HTML。</li>
                                 </ul>
                             </div>
                         </div>
