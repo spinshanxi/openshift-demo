@@ -259,7 +259,7 @@
                             <div class="spin-content-2">
                                 <ul>
                                     <li>用過 Oracle, MySQL, Postgres</li>
-                                    <li>了解關聯式資料庫的基本觀念，基礎的 DDL 與 DML 的指令都能使用。</li>
+                                    <li>了解關聯式資料庫的基本觀念，基礎的 DDL 與 DML 的指令都會用。</li>
                                 </ul>
                             </div>
                             <div>
@@ -267,7 +267,8 @@
                             </div>
                             <div class="spin-content-2">
                                 <ul>
-                                    <li>熟悉用 Spring 搭配 iBatis 取出資料庫資料對應到 Entity 上，並了解用 iBatis 建立動態的 SQL。。</li>
+                                    <li>熟悉用 Spring 搭配 iBatis 取出資料庫資料對應到 Entity 上，並了解用 iBatis 建立動態的 SQL。</li>
+                                    <li>會用 Hibernate 的 EntityManger 操作 sql。</li>
                                 </ul>
                             </div>
                             <div>
@@ -295,7 +296,7 @@
                             </div>
                             <div class="spin-content-2">
                                 <ul>
-                                    <li>工作上較少會用到，但看過完整的 W3C CSS 的教學，也看過幾本 CSS 的書，語法上還算是熟悉。</li>
+                                    <li>工作上較少用到，但看過完整的 W3C CSS 的教學，也看過幾本 CSS 的書，語法還算熟悉。</li>
                                 </ul>
                             </div>
                             <div>
@@ -303,8 +304,8 @@
                             </div>
                             <div class="spin-content-2">
                                 <ul>
-                                    <li>Git 會用 init、pull、push、commit、merge、stage、revert 等基礎指令</li>
-                                    <li>SVN 會用 init、update、commit、revert 等基礎指令</li>
+                                    <li>Git 會用 init、pull、push、commit、merge、stash、revert、fork 等基礎指令。</li>
+                                    <li>SVN 會用 init、update、commit、revert 等基礎指令。</li>
                                     <li>由於工作上不是負責最後統整上版的人，所以在使用經歷上比較偏上單純個人 branch 的操作。</li>
                                 </ul>
                             </div>
