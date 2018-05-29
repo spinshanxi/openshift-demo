@@ -12,7 +12,12 @@
 	<!--definition name="home" extends="base">
 		<put-attribute name="body" value="/WEB-INF/views/home.jsp"/>
 	</definition-->
-	<definition name="home" template="/WEB-INF/views/home.jsp"></definition>
+	<definition name="home" template="/WEB-INF/views/home.jsp">
+		<put-attribute name="question" value="/WEB-INF/views/basic_question.jsp"/>
+	</definition>
+	<definition name="home_wistron" template="/WEB-INF/views/home.jsp">
+		<put-attribute name="question" value="/WEB-INF/views/question_wistron.jsp"/>
+	</definition>	
 	
 	<definition name="resume_tw" template="/WEB-INF/views/resume_tw.jsp">	
 	</definition>

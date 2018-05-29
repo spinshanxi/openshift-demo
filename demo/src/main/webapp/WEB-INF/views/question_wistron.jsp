@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page session="false"%>
+    <p class="text-left">持續優化系統？</p>
+    <p class="text-left">同事們會分享或討論程式嗎？</p>
+    <p class="text-left">開發流程？</p>
+    <p class="text-left">有用版控？</p>
+    <p class="text-left">測試方式？</p>
+    <p class="text-left">部署方式？</p>
+    <p class="text-left">有任何一種形式的 Code review 嗎？</p>
+    <p class="text-left">系統是外包的嗎？</p>
+    <p class="text-left">Framework 的版本概況？</p>
+    <p class="text-left">樣版是用 JSP 嗎？ 是否會用 Scriptlet 的風格寫商業邏輯？</p>
+    <p class="text-left">Web Container 用什麼？</p>
+    <p class="text-left">是否有機會參與需求討論、分析與規劃？</p>
+    <p class="text-left">直屬主管對於程式的掌握度？</p>
+    <p class="text-left">是否有很多程式可以寫？</p>
+    <p class="text-left">上班地點是這裡嗎? 時段是 8:00-8:30 ~ 17:00-17:30？</p>
+    <p class="text-left">系統有文件嗎？</p>
+    <p class="text-left">工作內容？</p>

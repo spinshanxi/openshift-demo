@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="t"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page session="false"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,6 +54,11 @@
     .carousel-caption {
       display: none;
     }
+  }
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px 10px;
+  	}
   }
   .bg-1 {
       background: #2d2d30;
@@ -114,10 +121,6 @@
   textarea {
       resize: none;
   }
-  .mypic {
-  	display: flex;
-    justify-content: center;
-  }
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -158,82 +161,65 @@
     </div>
 </div>
 <div id="about" class="container text-center">
-  <div class="mypic">
-    <img src="resources/images/39609236971_d5bec810b7_b.jpg" class="img-circle person" alt="Spin">
-  </div>
-  <h3>Spin Liao</h3>
-  <p><em>Java Developer</em></p>
-  <p>I have been coding for 8 years. 1 year on my thesis, 7 years on web-site developer.</p>
-  <p>I have faced many challenges in this road. Coding is difficult, but I love it.</p>
-  <br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p class="text-center">
-      	<a href="resume/"><strong>English Resume</strong></a>
-      </p>
-    </div>
-    <div class="col-sm-4">
-      <p class="text-center">
-      	<a href="resume/tw"><strong>Chinese Resume</strong></a>
-      </p>
-    </div>
-    <div class="col-sm-4">
-      <p class="text-center">
-      	<a href="resume/skill"><strong>My Skills</strong></a>
-      </p>
-    </div>
-  </div>
+	<img src="resources/images/39609236971_d5bec810b7_b.jpg" class="img-circle person" alt="Spin">
+	<h3>Spin Liao</h3>
+	<p><em>Java Developer</em></p>
+	<p style="text-align:left">I have been coding for 8 years. 1 year on my thesis, 7 years on web-site developer. I have faced many challenges in this road. Coding is difficult, but I love it.</p>
+	<br>
+ 	<div class="row">
+		<div class="col-sm-4">
+			<p class="text-center">
+				<a href="resume/"><strong>English Resume</strong></a>
+			</p>
+    	</div>
+	    <div class="col-sm-4">
+			<p class="text-center">
+				<a href="resume/tw"><strong>Chinese Resume</strong></a>
+			</p>
+	    </div>
+	    <div class="col-sm-4">
+			<p class="text-center">
+	      		<a href="resume/skill"><strong>My Skills</strong></a>
+	      	</p>
+	    </div>
+	</div>
 </div>
 <div id="question" class="bg-1">
-  <div class="container">
-    <h3 class="text-center">Question</h3>
-    <p class="text-left">持續優化系統？</p>
-    <p class="text-left">同事們會分享或討論程式嗎？</p>
-    <p class="text-left">開發流程？</p>
-    <p class="text-left">有用版控？</p>
-    <p class="text-left">測試方式？</p>
-    <p class="text-left">部署方式？</p>
-    <p class="text-left">有任何一種形式的 Code review 嗎？</p>
-    <p class="text-left">系統是外包的嗎？</p>
-    <p class="text-left">Framework 的版本概況？</p>
-    <p class="text-left">樣版是用 JSP 嗎？ 是否會用 Scriptlet 的風格寫商業邏輯？</p>
-    <p class="text-left">Web Container 用什麼？</p>
-    <p class="text-left">是否有機會參與需求討論、分析與規劃？</p>
-    <p class="text-left">直屬主管對於程式的掌握度？</p>
-    <p class="text-left">是否有很多程式可以寫？</p>
-    <p class="text-left">上班地點是這裡嗎? 時段是 8:00-8:30 ~ 17:00-17:30？</p>
-    <p class="text-left">系統有文件嗎？</p>
-    <p class="text-left">工作內容？</p>
-  </div>
+	<div class="container">
+    	<h3 class="text-center">Question</h3>
+    		<t:insertAttribute name="question"/>
+  	</div>
 </div>
 <div id="contact" class="container">
-  <h3 class="text-center">Contact</h3>
-  <p class="text-center"><em>Welcome to contact me</em></p>
-  <div class="row">
-    <div class="col-md-4">
-      <p>Leave a note.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span>Taipei, TW</p>
-      <p><span class="glyphicon glyphicon-phone"></span>Phone: +886 939153198</p>
-      <p><span class="glyphicon glyphicon-envelope"></span>Email: spin637@gmail.com</p>
-    </div>
-    <div class="col-md-8">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-      <br>
-      <div class="row">
-        <div class="col-md-12 form-group">
-          <button class="btn pull-right" type="submit">Send</button>
-        </div>
-      </div>
-    </div>
-  </div>
+	<h3 class="text-center">Contact</h3>
+	<p class="text-center"><em>Welcome to contact me</em></p>
+	<div class="row">
+    	<div class="col-md-4">
+            <p>Leave a note.</p>
+	        <p><span class="glyphicon glyphicon-map-marker"></span>Taipei, TW</p>
+	        <p><span class="glyphicon glyphicon-phone"></span>Phone: +886 939153198</p>
+	        <p><span class="glyphicon glyphicon-envelope"></span>Email: spin637@gmail.com</p>
+		</div>
+		<div class="col-md-8">
+			<form:form method="POST" action="/spin-web/addContact" modelAttribute="contact">
+	        	<div class="row">
+		          	<div class="col-sm-6 form-group">
+		                <form:input path="name" class="form-control" id="name" placeholder="Name" type="text" required="required"/>
+					</div>
+					<div class="col-sm-6 form-group">
+						<form:input path="email" class="form-control" id="email" placeholder="Email" type="email" required="required"/>
+					</div>
+				</div>
+	      		<form:textarea path="comments" class="form-control" id="comments" placeholder="Comment" rows="5"/>
+	      		<br>
+	      		<div class="row">
+	        		<div class="col-md-12 form-group">
+	          			<button class="btn pull-right" type="submit">Send</button>
+        			</div>
+      			</div>
+    		</form:form>
+   		</div>
+	</div>
 </div>
 <footer class="text-center">
   <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
