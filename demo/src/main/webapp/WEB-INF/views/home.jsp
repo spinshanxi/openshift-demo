@@ -182,6 +182,16 @@
 	      		<a href="resume/skill"><strong>My Skills</strong></a>
 	      	</p>
 	    </div>
+	    <div class="col-sm-4">
+			<p class="text-center">
+	      		<a href="download/Mastering_Spring_MVC_4"><strong>Mastering Spring MVC 4</strong></a>
+	      	</p>
+	    </div>
+	    <div class="col-sm-4">
+			<p class="text-center">
+	      		<a href="download/Spring_in_Action_4th_Edition"><strong>Spring in Action, 4th Edition</strong></a>
+	      	</p>
+	    </div>
 	</div>
 </div>
 <div id="question" class="bg-1">
