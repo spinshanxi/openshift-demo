@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ page session="false"%>
 <p class="text-left">團隊氣氛？</p>
-<p class="text-left">同事們會分享或討論程式嗎？</p>
-<p class="text-left">有無法溝通的人嗎？比如: 公主病、情緒化嚴重</p>
+<p class="text-left">同事們會分享、討論程式、互相幫忙嗎？</p>
 <p class="text-left">是否會持續優化系統？</p>
 <p class="text-left">開發流程？</p>
 <p class="text-left">使用何種版控軟體？</p>
