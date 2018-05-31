@@ -15,6 +15,6 @@
     <p class="text-left">是否有機會參與需求討論、分析與規劃？</p>
     <p class="text-left">我的直屬主管對於程式的掌握度？</p>
     <p class="text-left">系統未來的方向？</p>
-    <p class="text-left">上班地點與時段？/p>
+    <p class="text-left">上班地點與時段？</p>
     <p class="text-left">有系統文件嗎？</p>
     <p class="text-left">詳細工作內容？</p>

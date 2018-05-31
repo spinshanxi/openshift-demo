@@ -1,5 +1,6 @@
 package spin.web.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.FileCopyUtils;
@@ -23,6 +24,8 @@ import java.io.OutputStream;
 import java.net.URLConnection;
 import java.nio.charset.Charset;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
@@ -32,14 +35,21 @@ public class HomeController {
     private static final String Mastering_Spring_MVC_4_pdf = "Mastering_Spring_MVC_4.pdf";
     private static final String Spring_in_Action_4th_Edition_pdf = "Spring_in_Action_4th_Edition.pdf";
 
-    @RequestMapping(value = { "/", "/home" }, method = GET)
-    public ModelAndView home() {
-        return new ModelAndView("home", "contact", new Contact());
+    @Autowired
+    private ServletContext servletContext;
+
+    @RequestMapping(value = { "/", "/home", "/home/" }, method = GET)
+    public ModelAndView home(HttpServletRequest request) {
+        ModelAndView mv = new ModelAndView("home", "contact", new Contact());
+        mv.addObject("baseUrl", servletContext.getContextPath());
+        return mv;
     }
 
-    @RequestMapping(value = { "/wistron", "/wistron/", "/home/wistron", "/home/wistron/" }, method = GET)
-    public ModelAndView homeWistron() {
-        return new ModelAndView("home_wistron", "contact", new Contact());
+    @RequestMapping(value = { "/home/wistron", "/home/wistron/" }, method = GET)
+    public ModelAndView homeWistron(HttpServletRequest request) {
+        ModelAndView mv = new ModelAndView("home_wistron", "contact", new Contact());
+        mv.addObject("baseUrl", servletContext.getContextPath());
+        return mv;
     }
 
     @RequestMapping(value = "/addContact", method = RequestMethod.POST)

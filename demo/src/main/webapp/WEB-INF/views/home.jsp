@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="t"%>
+<%@ taglib prefix="c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="t" uri="http://tiles.apache.org/tags-tiles" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page session="false"%>
 <!DOCTYPE html>
@@ -8,11 +9,11 @@
   <title>Spin Home</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="resources/css/bootstrap.css">
-  <link href="resources/css/lato.css" rel="stylesheet" type="text/css">
-  <link href="resources/css/montserrat.css" rel="stylesheet" type="text/css">
-  <script src="resources/js/jquery.js"></script>
-  <script src="resources/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="${baseUrl}/resources/css/bootstrap.css">
+  <link href="${baseUrl}/resources/css/lato.css" rel="stylesheet" type="text/css">
+  <link href="${baseUrl}/resources/css/montserrat.css" rel="stylesheet" type="text/css">
+  <script src="${baseUrl}/resources/js/jquery.js"></script>
+  <script src="${baseUrl}/resources/js/bootstrap.js"></script>
   <style>
   body {
       font: 400 15px/1.8 Lato, sans-serif;
@@ -152,7 +153,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="resources/images/bk.jpg" alt="" width="1200" height="700">
+        <img src="${baseUrl}/resources/images/bk.jpg" alt="" width="1200" height="700">
         <div class="carousel-caption">
           <h1>Spin</h1>
           <p>I love coding</p>
@@ -161,35 +162,37 @@
     </div>
 </div>
 <div id="about" class="container text-center">
-	<img src="resources/images/39609236971_d5bec810b7_b.jpg" class="img-circle person" alt="Spin">
+	<img src="${baseUrl}/resources/images/39609236971_d5bec810b7_b.jpg" class="img-circle person" alt="Spin">
 	<h3>Spin Liao</h3>
 	<p><em>Java Developer</em></p>
-	<p style="text-align:left">I have been coding for 8 years. 1 year on my thesis, 7 years on web-site developer. I have faced many challenges in this road. Coding is difficult, but I love it.</p>
+	<div style="text-align:left">
+		<t:insertAttribute name="introduction"/>
+	</div>
 	<br>
  	<div class="row">
 		<div class="col-sm-4">
 			<p class="text-center">
-				<a href="resume/"><strong>English Resume</strong></a>
+				<a href="${baseUrl}/resume/"><strong>English Resume</strong></a>
 			</p>
     	</div>
 	    <div class="col-sm-4">
 			<p class="text-center">
-				<a href="resume/tw"><strong>Chinese Resume</strong></a>
+				<a href="${baseUrl}/resume/tw"><strong>Chinese Resume</strong></a>
 			</p>
 	    </div>
 	    <div class="col-sm-4">
 			<p class="text-center">
-	      		<a href="resume/skill"><strong>My Skills</strong></a>
+	      		<a href="${baseUrl}/resume/skill"><strong>My Skills</strong></a>
 	      	</p>
 	    </div>
 	    <div class="col-sm-4">
 			<p class="text-center">
-	      		<a href="download/Mastering_Spring_MVC_4"><strong>Mastering Spring MVC 4</strong></a>
+	      		<a href="${baseUrl}/download/Mastering_Spring_MVC_4"><strong>Mastering Spring MVC 4</strong></a>
 	      	</p>
 	    </div>
 	    <div class="col-sm-4">
 			<p class="text-center">
-	      		<a href="download/Spring_in_Action_4th_Edition"><strong>Spring in Action, 4th Edition</strong></a>
+	      		<a href="${baseUrl}/download/Spring_in_Action_4th_Edition"><strong>Spring in Action, 4th Edition</strong></a>
 	      	</p>
 	    </div>
 	</div>
@@ -197,7 +200,7 @@
 <div id="question" class="bg-1">
 	<div class="container">
     	<h3 class="text-center">Question</h3>
-    		<t:insertAttribute name="question"/>
+    	<t:insertAttribute name="question"/>
   	</div>
 </div>
 <div id="contact" class="container">
@@ -211,7 +214,7 @@
 	        <p><span class="glyphicon glyphicon-envelope"></span>Email: spin637@gmail.com</p>
 		</div>
 		<div class="col-md-8">
-			<form:form method="POST" action="/spin-web/addContact" modelAttribute="contact">
+			<form:form method="POST" action="${baseUrl}/addContact" modelAttribute="contact">
 	        	<div class="row">
 		          	<div class="col-sm-6 form-group">
 		                <form:input path="name" class="form-control" id="name" placeholder="Name" type="text" required="required"/>

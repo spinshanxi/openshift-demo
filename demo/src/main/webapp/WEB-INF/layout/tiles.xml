@@ -13,9 +13,10 @@
 		<put-attribute name="body" value="/WEB-INF/views/home.jsp"/>
 	</definition-->
 	<definition name="home" template="/WEB-INF/views/home.jsp">
+		<put-attribute name="introduction" value="/WEB-INF/views/introduction.jsp"/>
 		<put-attribute name="question" value="/WEB-INF/views/question_basic.jsp"/>
 	</definition>
-	<definition name="home_wistron" template="/WEB-INF/views/home.jsp">
+	<definition name="home_wistron" extends="home">
 		<put-attribute name="question" value="/WEB-INF/views/question_wistron.jsp"/>
 	</definition>	
 	
