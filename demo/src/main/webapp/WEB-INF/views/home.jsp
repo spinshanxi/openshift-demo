@@ -199,7 +199,8 @@
 </div>
 <div id="question" class="bg-1">
 	<div class="container">
-    	<h3 class="text-center">Question</h3>
+    	<h3 class="text-center">My Interview Questions</h3>
+    	<h5 class="text-center">If you want to invite me to the interview, please answer the following questions.</h5>
     	<t:insertAttribute name="question"/>
   	</div>
 </div>
