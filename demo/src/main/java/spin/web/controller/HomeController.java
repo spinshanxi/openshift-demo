@@ -52,13 +52,6 @@ public class HomeController {
         return mv;
     }
 
-    @RequestMapping(value = { "/home/garmin", "/home/garmin/" }, method = GET)
-    public ModelAndView homeGarmin(HttpServletRequest request) {
-        ModelAndView mv = new ModelAndView("home_garmin", "contact", new Contact());
-        mv.addObject("baseUrl", servletContext.getContextPath());
-        return mv;
-    }
-    
     @RequestMapping(value = "/addContact", method = RequestMethod.POST)
     public String submit(@Valid @ModelAttribute("contact") Contact contact, BindingResult result, ModelMap model) {
         if (result.hasErrors()) {
