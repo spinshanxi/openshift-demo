@@ -1,10 +1,13 @@
 package spin.config;
 
+import javax.sql.DataSource;
+
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -52,5 +55,15 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         messageSource.setBasename("/WEB-INF/message/messages");
         messageSource.setCacheSeconds(10);
         return messageSource;
+    }
+    
+    @Bean
+    public DataSource dataSource() {
+        DriverManagerDataSource ds = new DriverManagerDataSource();
+        ds.setDriverClassName("org.postgresql.Driver");
+        ds.setUrl("jdbc:postgresql://10.129.18.187:5432/root");
+        ds.setUsername("userdlV");
+        ds.setPassword("glVJfII8");
+        return ds;
     }
 }

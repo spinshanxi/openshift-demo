@@ -23,10 +23,15 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URLConnection;
 import java.nio.charset.Charset;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
 import javax.validation.Valid;
 
 @Controller
@@ -38,8 +43,55 @@ public class HomeController {
     @Autowired
     private ServletContext servletContext;
 
+    @Autowired
+    private DataSource dataSource;
+    
     @RequestMapping(value = { "/", "/home", "/home/" }, method = GET)
     public ModelAndView home(HttpServletRequest request) {
+        
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            con = dataSource.getConnection();
+            System.out.println(con.getSchema());
+            ps = con.prepareStatement("select id, name, review from phone");
+            rs = ps.executeQuery();
+            System.out.println(rs.getMetaData());
+            while (rs.next()) {
+                System.out.println(rs.getInt("id"));
+                System.out.println(rs.getString("name"));
+                System.out.println(rs.getString("review"));
+            }
+        }catch(Exception e) {
+            e.printStackTrace();
+        }finally {
+            if(con != null) {
+                try {
+                    con.close();
+                } catch (SQLException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+            if(ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+            if(rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        }
+        
         ModelAndView mv = new ModelAndView("home", "contact", new Contact());
         mv.addObject("baseUrl", servletContext.getContextPath());
         return mv;
