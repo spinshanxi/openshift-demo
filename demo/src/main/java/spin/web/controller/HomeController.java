@@ -55,7 +55,7 @@ public class HomeController {
         try {
             con = dataSource.getConnection();
             System.out.println(con.getSchema());
-            ps = con.prepareStatement("select id, name, review from phone");
+            ps = con.prepareStatement("select id, name, review from public.phone");
             rs = ps.executeQuery();
             System.out.println(rs.getMetaData());
             while (rs.next()) {
