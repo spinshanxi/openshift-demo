@@ -55,15 +55,14 @@ public class HomeController {
         try {
             con = dataSource.getConnection();
             System.out.println(con.getSchema());
-            ps = con.prepareStatement("CREATE TABLE Phone2 ( id bigserial NOT NULL PRIMARY KEY, name varchar(20) NOT NULL, review varchar(20) DEFAULT NULL )");
-            ps.execute();
             ps.close();
             ps = con.prepareStatement("select id, name, review from phone2");
             rs = ps.executeQuery();
             while (rs.next()) {
-                System.out.println(rs.getInt("id"));
-                System.out.println(rs.getString("name"));
-                System.out.println(rs.getString("review"));
+                System.out.print(rs.getInt("id")+", ");
+                System.out.print(rs.getString("name")+", ");
+                System.out.print(rs.getString("review"));
+                System.out.println();
             }
         }catch(Exception e) {
             e.printStackTrace();
