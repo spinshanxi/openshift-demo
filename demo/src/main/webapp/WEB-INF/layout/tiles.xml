@@ -19,7 +19,13 @@
 	<definition name="home_wistron" extends="home">
 		<put-attribute name="question" value="/WEB-INF/views/question_wistron.jsp"/>
 	</definition>
-	
+	<definition name="home_cht" extends="home">
+		<put-attribute name="question" value="/WEB-INF/views/question_cht.jsp"/>
+	</definition>
+		
+	<definition name="marry" template="/WEB-INF/views/marry.jsp">
+	</definition>
+		
 	<definition name="resume_tw" template="/WEB-INF/views/resume_tw.jsp">	
 	</definition>
 	

@@ -48,49 +48,6 @@ public class HomeController {
     
     @RequestMapping(value = { "/", "/home", "/home/" }, method = GET)
     public ModelAndView home(HttpServletRequest request) {
-        
-        Connection con = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        try {
-            con = dataSource.getConnection();
-            ps = con.prepareStatement("select id, name, review from phone2");
-            rs = ps.executeQuery();
-            while (rs.next()) {
-                System.out.print(rs.getInt("id")+", ");
-                System.out.print(rs.getString("name")+", ");
-                System.out.print(rs.getString("review"));
-                System.out.println();
-            }
-        }catch(Exception e) {
-            e.printStackTrace();
-        }finally {
-            if(con != null) {
-                try {
-                    con.close();
-                } catch (SQLException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-            if(ps != null) {
-                try {
-                    ps.close();
-                } catch (SQLException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-            if(rs != null) {
-                try {
-                    rs.close();
-                } catch (SQLException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-        }
-        
         ModelAndView mv = new ModelAndView("home", "contact", new Contact());
         mv.addObject("baseUrl", servletContext.getContextPath());
         return mv;

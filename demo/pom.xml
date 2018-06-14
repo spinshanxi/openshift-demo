@@ -18,6 +18,7 @@
 		<mysql-connector-java-version>5.1.44</mysql-connector-java-version>
 		<commons-dbcp-version>1.4</commons-dbcp-version>
 		<hibernate.version>4.3.11.Final</hibernate.version>
+		<joda-time.version>2.3</joda-time.version>
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -127,7 +128,6 @@
 		    <version>5.4.2</version>
 		</dependency>
 
-
 		<!-- Apache Tiles -->
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
@@ -187,10 +187,23 @@
 			<version>${commons-dbcp-version}</version>
 		</dependency>
 		<dependency>
-		<groupId>org.postgresql</groupId>
-		<artifactId>postgresql</artifactId>
-		<version>9.4.1207.jre7</version>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.4.1207.jre7</version>
 		</dependency>
+        <!-- Joda-Time -->       
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>${joda-time.version}</version>
+        </dependency>
+         
+        <!-- To map JodaTime with database type -->      
+        <dependency>
+            <groupId>org.jadira.usertype</groupId>
+            <artifactId>usertype.core</artifactId>
+            <version>3.0.0.CR1</version>
+        </dependency>
         <dependency>
 		    <groupId>commons-lang</groupId>
 		    <artifactId>commons-lang</artifactId>
